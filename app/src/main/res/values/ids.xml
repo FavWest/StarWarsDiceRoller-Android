@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="num_green" type="id" />
+    <item name="label_green" type="id" />
+    <item name="num_yellow" type="id" />
+    <item name="label_yellow" type="id" />
+    <item name="num_purple" type="id" />
+    <item name="label_purple" type="id" />
+    <item name="num_red" type="id" />
+    <item name="label_red" type="id" />
+    <item name="num_blue" type="id" />
+    <item name="label_blue" type="id" />
+    <item name="num_black" type="id" />
+    <item name="label_black" type="id" />
+    <item name="num_white" type="id" />
+    <item name="label_white" type="id" />
+    <item name="results" type="id" />
+    <item name="button" type="id" />
+</resources>

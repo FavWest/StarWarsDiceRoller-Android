@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/gradient">
+
+    <EditText
+        android:id="@+id/num_green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@id/num_yellow"
+        app:layout_constraintEnd_toStartOf="@id/label_green"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="0"
+        android:inputType="number"
+        android:hint="@string/zero"
+        android:textColor="@color/dice_green" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/label_green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="@string/ability_dice"
+        android:textColor="@color/dice_green"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@id/num_green"
+        app:layout_constraintStart_toEndOf="@id/num_green"
+        app:layout_constraintTop_toTopOf="@id/num_green"/>
+
+    <EditText
+        android:id="@+id/num_yellow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@id/label_yellow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/num_green"
+        android:autofillHints="0"
+        android:inputType="number"
+        android:hint="@string/zero"
+        android:textColor="@color/dice_yellow"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/label_yellow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="@string/proficiency_dice"
+        android:textColor="@color/dice_yellow"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@id/num_yellow"
+        app:layout_constraintStart_toEndOf="@id/num_yellow"
+        app:layout_constraintTop_toTopOf="@id/num_yellow" />
+
+    <EditText
+        android:id="@+id/num_purple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:textColor="@color/dice_purple"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@id/label_purple"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/num_yellow"
+        android:autofillHints="0"
+        android:inputType="number"
+        android:hint="@string/zero"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/label_purple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="@string/difficulty_dice"
+        android:textColor="@color/dice_purple"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@id/num_purple"
+        app:layout_constraintStart_toEndOf="@id/num_purple"
+        app:layout_constraintTop_toTopOf="@id/num_purple" />
+
+    <EditText
+        android:id="@+id/num_red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:textColor="@color/dice_red"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@id/label_red"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/num_purple"
+        android:autofillHints="0"
+        android:inputType="number"
+        android:hint="@string/zero"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/label_red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="@string/challenge_dice"
+        android:textColor="@color/dice_red"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@id/num_red"
+        app:layout_constraintStart_toEndOf="@id/num_red"
+        app:layout_constraintTop_toTopOf="@id/num_red" />
+
+    <EditText
+        android:id="@+id/num_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:textColor="@color/dice_blue"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@id/label_blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/num_red"
+        android:autofillHints="0"
+        android:inputType="number"
+        android:hint="@string/zero"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/label_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="@string/boost_dice"
+        android:textColor="@color/dice_blue"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@id/num_blue"
+        app:layout_constraintStart_toEndOf="@id/num_blue"
+        app:layout_constraintTop_toTopOf="@id/num_blue" />
+
+    <EditText
+        android:id="@+id/num_black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@id/label_black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/num_blue"
+        android:autofillHints="0"
+        android:inputType="number"
+        android:hint="@string/zero"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/label_black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="@string/setback_dice"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@id/num_black"
+        app:layout_constraintStart_toEndOf="@id/num_black"
+        app:layout_constraintTop_toTopOf="@id/num_black" />
+
+    <EditText
+        android:id="@+id/num_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@id/label_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/num_black"
+        android:autofillHints="0"
+        android:inputType="number"
+        android:hint="@string/zero"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/label_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="@string/force_dice"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@id/num_white"
+        app:layout_constraintStart_toEndOf="@id/num_white"
+        app:layout_constraintTop_toTopOf="@id/num_white" />
+
+    <TextView
+        android:id="@+id/results"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:visibility="gone"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_white"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/white"
+        android:padding="4dp"
+        />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/roll"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/results"
+        android:textColor="@color/black"
+        android:padding="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
