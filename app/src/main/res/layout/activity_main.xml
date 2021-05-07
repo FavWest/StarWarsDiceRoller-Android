@@ -8,9 +8,9 @@
     android:background="@drawable/gradient">
 
     <Button
+        android:background="@drawable/square_button"
         android:id="@+id/plus_green"
         android:layout_width="0dp"
-        android:background="@drawable/square_button"
         android:layout_height="0dp"
         android:text="+"
         app:layout_constraintBottom_toBottomOf="@+id/num_green"
@@ -19,7 +19,7 @@
         android:layout_marginLeft="32dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintDimensionRatio="H, 1:1"
-        android:foreground="?attr/selectableItemBackground"/>
+        />
 
     <TextView
         android:id="@+id/num_green"
