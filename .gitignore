@@ -15,7 +15,6 @@
 local.properties
 # My additions
 .idea/
-build.gradle
 gradle.properties
 gradle/
 gradlew
@@ -28,3 +27,4 @@ proguard-rules.pro
 
 app/src/androidTest
 app/src/test
+
