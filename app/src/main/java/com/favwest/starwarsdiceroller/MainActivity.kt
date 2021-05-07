@@ -17,13 +17,28 @@ class MainActivity : AppCompatActivity() {
         val resultsTextView: TextView = findViewById(R.id.results)
         val plusGreen: TextView = findViewById(R.id.plus_green)
         val plusPurple: TextView = findViewById(R.id.plus_purple)
+        val plusYellow: TextView = findViewById(R.id.plus_yellow)
+        val plusRed: TextView = findViewById(R.id.plus_red)
+        val plusBlue: TextView = findViewById(R.id.plus_blue)
+        val plusBlack: TextView = findViewById(R.id.plus_black)
+        val plusWhite: TextView = findViewById(R.id.plus_white)
         val minusGreen: TextView = findViewById(R.id.minus_green)
         val minusPurple: TextView = findViewById(R.id.minus_purple)
+        val minusYellow: TextView = findViewById(R.id.minus_yellow)
+        val minusRed: TextView = findViewById(R.id.minus_red)
+        val minusBlue: TextView = findViewById(R.id.minus_blue)
+        val minusBlack: TextView = findViewById(R.id.minus_black)
+        val minusWhite: TextView = findViewById(R.id.minus_white)
         val numGreen: TextView = findViewById(R.id.num_green)
         val numPurple: TextView = findViewById(R.id.num_purple)
+        val numYellow: TextView = findViewById(R.id.num_yellow)
+        val numRed: TextView = findViewById(R.id.num_red)
+        val numBlue: TextView = findViewById(R.id.num_blue)
+        val numBlack: TextView = findViewById(R.id.num_black)
+        val numWhite: TextView = findViewById(R.id.num_white)
 
         rollButton.setOnClickListener {
-            val text = getResult(numGreen, numPurple)
+            val text = getResult(numGreen, numPurple, numYellow, numRed, numBlue, numBlack, numWhite)
             resultsTextView.text = text
             resultsTextView.visibility = VISIBLE
         }
@@ -33,31 +48,95 @@ class MainActivity : AppCompatActivity() {
             numGreen.text = text
         }
 
-        minusGreen.setOnClickListener {
-            if(numGreen.text.toString().toInt()>0) {
-                val text = (numGreen.text.toString().toInt() - 1).toString()
-                numGreen.text= text
-            }
-        }
-
         plusPurple.setOnClickListener {
             val text = (numPurple.text.toString().toInt() + 1).toString()
             numPurple.text = text
         }
 
+        plusYellow.setOnClickListener {
+            val text = (numYellow.text.toString().toInt() + 1).toString()
+            numYellow.text = text
+        }
+
+        plusRed.setOnClickListener {
+            val text = (numRed.text.toString().toInt() + 1).toString()
+            numRed.text = text
+        }
+
+        plusBlue.setOnClickListener {
+            val text = (numBlue.text.toString().toInt() + 1).toString()
+            numBlue.text = text
+        }
+
+        plusBlack.setOnClickListener {
+            val text = (numBlack.text.toString().toInt() + 1).toString()
+            numBlack.text = text
+        }
+
+        plusWhite.setOnClickListener{
+            val text = (numWhite.text.toString().toInt() +1).toString()
+            numWhite.text = text
+        }
+
+        minusGreen.setOnClickListener {
+            if(numGreen.text.toString().toInt()>0) {
+                val text = (numGreen.text.toString().toInt() - 1).toString()
+                numGreen.text = text
+            }
+        }
+
         minusPurple.setOnClickListener {
             if(numPurple.text.toString().toInt()>0) {
                 val text = (numPurple.text.toString().toInt() - 1).toString()
-                numPurple.text= text
+                numPurple.text = text
+            }
+        }
+
+        minusYellow.setOnClickListener {
+            if(numYellow.text.toString().toInt()>0) {
+                val text = (numYellow.text.toString().toInt() - 1).toString()
+                numYellow.text = text
+            }
+        }
+
+        minusRed.setOnClickListener {
+            if(numRed.text.toString().toInt()>0) {
+                val text = (numRed.text.toString().toInt() - 1).toString()
+                numRed.text = text
+            }
+        }
+
+        minusBlue.setOnClickListener {
+            if(numBlue.text.toString().toInt()>0) {
+                val text = (numBlue.text.toString().toInt() - 1).toString()
+                numBlue.text = text
+            }
+        }
+
+        minusBlack.setOnClickListener {
+            if(numBlack.text.toString().toInt()>0) {
+                val text = (numBlack.text.toString().toInt() - 1).toString()
+                numBlack.text = text
+            }
+        }
+
+        minusWhite.setOnClickListener {
+            if(numWhite.text.toString().toInt()>0) {
+                val text = (numWhite.text.toString().toInt() - 1).toString()
+                numWhite.text = text
             }
         }
     }
 
-    private fun getResult(numGreen: TextView, numPurple: TextView): String {
+    private fun getResult(numGreen: TextView, numPurple: TextView, numYellow: TextView,
+    numRed: TextView, numBlue: TextView, numBlack: TextView, numWhite: TextView): String {
         var success = 0
         var advantage = 0
         var triumph = 0
         var despair = 0
+        var light = 0
+        var dark = 0
+
         val greenDice = numGreen.text.toString().toInt()
         if(greenDice>0){
             val greenArray=rollGreen(greenDice)
@@ -69,6 +148,38 @@ class MainActivity : AppCompatActivity() {
             val purpleArray=rollPurple(purpleDice)
             success -= purpleArray[0]
             advantage -= purpleArray[1]
+        }
+        val yellowDice = numYellow.text.toString().toInt()
+        if(yellowDice>0){
+            val yellowArray = rollYellow(yellowDice)
+            success += yellowArray[0]
+            advantage += yellowArray[1]
+            triumph += yellowArray[2]
+        }
+        val redDice = numRed.text.toString().toInt()
+        if(redDice>0){
+            val redArray = rollRed(redDice)
+            success -= redArray[0]
+            advantage -= redArray[1]
+            despair += redArray[2]
+        }
+        val blueDice = numBlue.text.toString().toInt()
+        if(blueDice>0){
+            val blueArray = rollBlue(blueDice)
+            success += blueArray[0]
+            advantage += blueArray[1]
+        }
+        val blackDice = numBlack.text.toString().toInt()
+        if(blackDice>0){
+            val blackArray=rollBlack(blackDice)
+            success -= blackArray[0]
+            advantage -= blackArray[1]
+        }
+        val whiteDice = numWhite.text.toString().toInt()
+        if(whiteDice>0){
+            val whiteArray = rollWhite(whiteDice)
+            light += whiteArray[0]
+            dark += whiteArray[1]
         }
         var result=""
         if(success>0){
@@ -84,18 +195,23 @@ class MainActivity : AppCompatActivity() {
             result += "$threat threat\n"
         }
         if(triumph>0){
-            result += if(triumph==1) "$triumph triumph" else "$triumph triumphs"
+            result += if(triumph==1) "$triumph triumph\n" else "$triumph triumphs\n"
         }
         if(despair>0){
-            result += if(despair==1) "$despair despair" else "$despair despairs"
+            result += if(despair==1) "$despair despair\n" else "$despair despairs\n"
         }
-
+        if(light>0){
+            result += "$light light\n"
+        }
+        if(dark>0){
+            result += "$dark dark\n"
+        }
         if(result.isNotEmpty()){
             result = result.slice(0..(result.length-2))
         } else {
             result = "No net successes or failures"
         }
-        return result //TODO remove trailing \n, add message for empty string
+        return result
     }
     private fun rollGreen(num:Int): Array<Int> {
         var success = 0
@@ -117,19 +233,102 @@ class MainActivity : AppCompatActivity() {
 
     private fun rollPurple(num:Int): Array<Int> {
         var failure = 0
-        var disadvantage = 0
+        var threat = 0
         for(dice in 1..num){
             when((1..8).random()){
                 2, 3 -> failure ++
                 4 -> failure += 2
-                5, 6 -> disadvantage ++
+                5, 6 -> threat ++
                 7 -> {
                     failure ++
-                    disadvantage ++
+                    threat ++
                 }
-                8 -> disadvantage += 2
+                8 -> threat += 2
             }
         }
-        return arrayOf(failure,disadvantage)
+        return arrayOf(failure,threat)
+    }
+
+    private fun rollYellow(num:Int): Array<Int>{
+        var success = 0
+        var advantage = 0
+        var triumph = 0
+        for(dice in 1..num){
+            when((1..12).random()){
+                2, 3 -> success ++
+                4, 5 -> success += 2
+                6 -> advantage ++
+                7, 8, 9 -> {
+                    success ++
+                    advantage ++
+                }
+                10, 11 -> advantage += 2
+                12 -> triumph ++
+            }
+        }
+        return arrayOf(success, advantage, triumph)
+    }
+
+    private fun rollRed(num:Int): Array<Int>{
+        var failure = 0
+        var threat = 0
+        var despair = 0
+        for(dice in 1..num){
+            when((1..12).random()){
+                2, 3 -> failure ++
+                4, 5 -> failure += 2
+                6, 7 -> threat ++
+                8, 9 -> {
+                    failure ++
+                    threat ++
+                }
+                10, 11 -> threat += 2
+                12 -> despair ++
+            }
+        }
+        return arrayOf(failure, threat, despair)
+    }
+
+    private fun rollBlue(num:Int): Array<Int> {
+        var success = 0
+        var advantage = 0
+        for(dice in 1..num){
+            when((1..6).random()){
+                3 -> success ++
+                4 -> {
+                    success ++
+                    advantage ++
+                }
+                5 -> advantage += 2
+                6 -> advantage ++
+            }
+        }
+        return arrayOf(success,advantage)
+    }
+
+    private fun rollBlack(num:Int): Array<Int> {
+        var failure = 0
+        var threat = 0
+        for(dice in 1..num){
+            when((1..6).random()){
+                3, 4 -> failure ++
+                5, 6 -> threat ++
+            }
+        }
+        return arrayOf(failure,threat)
+    }
+
+    private fun rollWhite(num:Int): Array<Int> {
+        var light = 0
+        var dark = 0
+        for(dice in 1..num){
+            when((1..12).random()){
+                1, 2, 3, 4, 5, 6 -> dark ++
+                7 -> dark += 2
+                8, 9 -> light ++
+                10, 11, 12 -> light += 2
+            }
+        }
+        return arrayOf(light, dark)
     }
 }
