@@ -15,14 +15,24 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val rollButton: Button = findViewById(R.id.button)
         val resultsTextView: TextView = findViewById(R.id.results)
+        val plusGreen: TextView = findViewById(R.id.plus_green)
+        val minusGreen: TextView = findViewById(R.id.minus_green)
         val numGreen: TextView = findViewById(R.id.num_green)
 
         rollButton.setOnClickListener {
-            var greenDice = numGreen.text.toString().toInt()
+            val greenDice = numGreen.text.toString().toInt()
             Toast.makeText(this, greenDice.toString(), Toast.LENGTH_LONG).show()
-            val resultArray=rollGreen(greenDice + 1)
+            val resultArray=rollGreen(greenDice)
             resultsTextView.text = "${resultArray[0]} success, ${resultArray[1]} advantage"
             resultsTextView.visibility = VISIBLE
+        }
+
+        plusGreen.setOnClickListener {
+            numGreen.text=(numGreen.text.toString().toInt() + 1).toString()
+        }
+
+        minusGreen.setOnClickListener {
+            if(numGreen.text.toString().toInt()>0) numGreen.text=(numGreen.text.toString().toInt() - 1).toString()
         }
     }
 
