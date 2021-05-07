@@ -33,7 +33,7 @@
         android:textSize="30sp"
         app:layout_constraintStart_toEndOf="@id/plus_green"
         app:layout_constraintTop_toTopOf="parent"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:text="0"
         android:background="@color/dice_green"
         android:paddingLeft="8dp"
@@ -97,6 +97,232 @@
         app:layout_constraintDimensionRatio="H, 1:1"
         app:layout_constraintStart_toEndOf="@+id/num_purple"
         app:layout_constraintTop_toTopOf="@+id/num_purple" />
+
+    <Button
+        android:background="@drawable/square_button"
+        android:id="@+id/plus_yellow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="@+id/num_yellow"
+        app:layout_constraintTop_toTopOf="@+id/num_yellow"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintDimensionRatio="H, 1:1"
+        />
+
+    <TextView
+        android:id="@+id/num_yellow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@id/plus_yellow"
+        app:layout_constraintTop_toBottomOf="@id/num_green"
+        android:textColor="@color/black"
+        android:text="0"
+        android:background="@color/dice_yellow"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp" />
+
+
+    <Button
+        android:id="@+id/minus_yellow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:background="@drawable/square_button"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="@+id/num_yellow"
+        app:layout_constraintDimensionRatio="H, 1:1"
+        app:layout_constraintStart_toEndOf="@+id/num_yellow"
+        app:layout_constraintTop_toTopOf="@+id/num_yellow" />
+
+    <Button
+        android:id="@+id/plus_red"
+        android:layout_width="0dp"
+        android:background="@drawable/square_button"
+        android:layout_height="0dp"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="@+id/num_red"
+        app:layout_constraintTop_toTopOf="@+id/num_red"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintStart_toEndOf="@id/minus_green"
+        app:layout_constraintDimensionRatio="H, 1:1" />
+
+    <TextView
+        android:id="@+id/num_red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@id/plus_red"
+        app:layout_constraintTop_toBottomOf="@id/num_purple"
+        android:textColor="@color/white"
+        android:text="0"
+        android:background="@color/dice_red"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp" />
+
+    <Button
+        android:id="@+id/minus_red"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:background="@drawable/square_button"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="@+id/num_red"
+        app:layout_constraintDimensionRatio="H, 1:1"
+        app:layout_constraintStart_toEndOf="@+id/num_red"
+        app:layout_constraintTop_toTopOf="@+id/num_red" />
+
+    <Button
+        android:background="@drawable/square_button"
+        android:id="@+id/plus_blue"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="@+id/num_blue"
+        app:layout_constraintTop_toTopOf="@+id/num_blue"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintDimensionRatio="H, 1:1"
+        />
+
+    <TextView
+        android:id="@+id/num_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@id/plus_blue"
+        app:layout_constraintTop_toBottomOf="@id/num_yellow"
+        android:textColor="@color/black"
+        android:text="0"
+        android:background="@color/dice_blue"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp" />
+
+
+    <Button
+        android:id="@+id/minus_blue"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:background="@drawable/square_button"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="@+id/num_blue"
+        app:layout_constraintDimensionRatio="H, 1:1"
+        app:layout_constraintStart_toEndOf="@+id/num_blue"
+        app:layout_constraintTop_toTopOf="@+id/num_blue" />
+
+    <Button
+        android:id="@+id/plus_black"
+        android:layout_width="0dp"
+        android:background="@drawable/square_button"
+        android:layout_height="0dp"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="@+id/num_black"
+        app:layout_constraintTop_toTopOf="@+id/num_black"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintStart_toEndOf="@id/minus_green"
+        app:layout_constraintDimensionRatio="H, 1:1" />
+
+    <TextView
+        android:id="@+id/num_black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@id/plus_black"
+        app:layout_constraintTop_toBottomOf="@id/num_red"
+        android:textColor="@color/white"
+        android:text="0"
+        android:background="@color/black"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp" />
+
+    <Button
+        android:id="@+id/minus_black"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:background="@drawable/square_button"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="@+id/num_black"
+        app:layout_constraintDimensionRatio="H, 1:1"
+        app:layout_constraintStart_toEndOf="@+id/num_black"
+        app:layout_constraintTop_toTopOf="@+id/num_black" />
+
+    <Button
+        android:background="@drawable/square_button"
+        android:id="@+id/plus_white"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="@+id/num_white"
+        app:layout_constraintTop_toTopOf="@+id/num_white"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintDimensionRatio="H, 1:1"
+        />
+
+    <TextView
+        android:id="@+id/num_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@id/plus_white"
+        app:layout_constraintTop_toBottomOf="@id/num_blue"
+        android:textColor="@color/black"
+        android:text="0"
+        android:background="@color/white"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp" />
+
+    <Button
+        android:id="@+id/minus_white"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:background="@drawable/square_button"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="@+id/num_white"
+        app:layout_constraintDimensionRatio="H, 1:1"
+        app:layout_constraintStart_toEndOf="@+id/num_white"
+        app:layout_constraintTop_toTopOf="@+id/num_white" />
+
     <TextView
         android:id="@+id/results"
         android:layout_width="wrap_content"
@@ -124,6 +350,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/num_green" />
+        app:layout_constraintTop_toBottomOf="@+id/num_white" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
