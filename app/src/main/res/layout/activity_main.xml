@@ -18,7 +18,8 @@
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintDimensionRatio="H, 1:1" />
+        app:layout_constraintDimensionRatio="H, 1:1"
+        android:foreground="?attr/selectableItemBackground"/>
 
     <TextView
         android:id="@+id/num_green"

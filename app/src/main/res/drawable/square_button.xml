@@ -4,4 +4,5 @@
     android:shape="rectangle">
     <corners
         android:radius="0dp"/>
+    <ripple></ripple>
 </shape>
