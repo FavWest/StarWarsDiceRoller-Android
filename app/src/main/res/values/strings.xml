@@ -10,4 +10,5 @@
     <string name="boost_dice">Boost Dice</string>
     <string name="setback_dice">Setback Dice</string>
     <string name="force_dice">Force Dice</string>
+    <string name="clear">clear</string>
 </resources>

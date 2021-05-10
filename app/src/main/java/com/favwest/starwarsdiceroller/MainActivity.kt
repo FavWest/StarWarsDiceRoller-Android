@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val rollButton: Button = findViewById(R.id.button)
+        val clearButton: Button = findViewById(R.id.clear)
         val resultsTextView: TextView = findViewById(R.id.results)
         val plusGreen: TextView = findViewById(R.id.plus_green)
         val plusPurple: TextView = findViewById(R.id.plus_purple)
@@ -41,6 +42,16 @@ class MainActivity : AppCompatActivity() {
             val text = getResult(numGreen, numPurple, numYellow, numRed, numBlue, numBlack, numWhite)
             resultsTextView.text = text
             resultsTextView.visibility = VISIBLE
+        }
+
+        clearButton.setOnClickListener {
+            numGreen.text="0"
+            numPurple.text="0"
+            numYellow.text="0"
+            numRed.text="0"
+            numBlue.text="0"
+            numBlack.text="0"
+            numWhite.text="0"
         }
 
         plusGreen.setOnClickListener {
