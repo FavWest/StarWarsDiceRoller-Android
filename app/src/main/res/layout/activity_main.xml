@@ -8,35 +8,20 @@
     android:background="@drawable/gradient">
 
     <Button
-        android:background="@drawable/square_button"
         android:id="@+id/plus_green"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="+"
+        android:text="@string/plus"
         app:layout_constraintBottom_toBottomOf="@+id/num_green"
         app:layout_constraintTop_toTopOf="@+id/num_green"
-        android:layout_marginStart="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintDimensionRatio="H, 1:1"
-        />
+        style="@style/plus" />
 
     <TextView
         android:id="@+id/num_green"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginRight="4dp"
-        android:textSize="30sp"
         app:layout_constraintStart_toEndOf="@id/plus_green"
         app:layout_constraintTop_toTopOf="parent"
-        android:textColor="@color/black"
-        android:text="0"
-        android:background="@color/dice_green"
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp" />
+        android:text="@string/zero"
+        style="@style/num"/>
 
 
     <Button
@@ -44,9 +29,8 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
         android:background="@drawable/square_button"
-        android:text="-"
+        android:text="@string/minus"
         app:layout_constraintBottom_toBottomOf="@+id/num_green"
         app:layout_constraintDimensionRatio="H, 1:1"
         app:layout_constraintStart_toEndOf="@+id/num_green"
@@ -54,15 +38,12 @@
 
     <Button
         android:id="@+id/plus_purple"
-        android:layout_width="0dp"
-        android:background="@drawable/square_button"
-        android:layout_height="0dp"
         android:text="+"
         app:layout_constraintBottom_toBottomOf="@+id/num_purple"
         app:layout_constraintTop_toTopOf="@+id/num_purple"
-        android:layout_marginStart="16dp"
         app:layout_constraintStart_toEndOf="@id/minus_green"
-        app:layout_constraintDimensionRatio="H, 1:1" />
+        app:layout_constraintDimensionRatio="H, 1:1"
+        style="@style/plus"/>
 
     <TextView
         android:id="@+id/num_purple"
@@ -111,21 +92,12 @@
 
     <TextView
         android:id="@+id/num_yellow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginRight="4dp"
-        android:textSize="30sp"
         app:layout_constraintStart_toEndOf="@id/plus_yellow"
         app:layout_constraintTop_toBottomOf="@id/num_green"
-        android:textColor="@color/black"
         android:text="0"
         android:background="@color/dice_yellow"
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp" />
+        style="@style/num"
+ />
 
 
     <Button

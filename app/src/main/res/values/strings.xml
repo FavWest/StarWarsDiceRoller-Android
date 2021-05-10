@@ -3,7 +3,6 @@
     <string name="ability_dice">Ability Dice</string>
     <string name="roll">Do or do not</string>
     <string name="ability_dice_hint">enter number of ability dice</string>
-    <string name="zero">0</string>
     <string name="proficiency_dice">Proficiency Dice</string>
     <string name="difficulty_dice">Difficulty Dice</string>
     <string name="challenge_dice">Challenge Dice</string>
@@ -11,4 +10,7 @@
     <string name="setback_dice">Setback Dice</string>
     <string name="force_dice">Force Dice</string>
     <string name="clear">clear</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+    <string name="zero">0</string>
 </resources>

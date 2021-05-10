@@ -13,23 +13,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val rollButton: Button = findViewById(R.id.button)
-        val clearButton: Button = findViewById(R.id.clear)
         val resultsTextView: TextView = findViewById(R.id.results)
-        val plusGreen: TextView = findViewById(R.id.plus_green)
-        val plusPurple: TextView = findViewById(R.id.plus_purple)
-        val plusYellow: TextView = findViewById(R.id.plus_yellow)
-        val plusRed: TextView = findViewById(R.id.plus_red)
-        val plusBlue: TextView = findViewById(R.id.plus_blue)
-        val plusBlack: TextView = findViewById(R.id.plus_black)
-        val plusWhite: TextView = findViewById(R.id.plus_white)
-        val minusGreen: TextView = findViewById(R.id.minus_green)
-        val minusPurple: TextView = findViewById(R.id.minus_purple)
-        val minusYellow: TextView = findViewById(R.id.minus_yellow)
-        val minusRed: TextView = findViewById(R.id.minus_red)
-        val minusBlue: TextView = findViewById(R.id.minus_blue)
-        val minusBlack: TextView = findViewById(R.id.minus_black)
-        val minusWhite: TextView = findViewById(R.id.minus_white)
         val numGreen: TextView = findViewById(R.id.num_green)
         val numPurple: TextView = findViewById(R.id.num_purple)
         val numYellow: TextView = findViewById(R.id.num_yellow)
@@ -38,13 +22,13 @@ class MainActivity : AppCompatActivity() {
         val numBlack: TextView = findViewById(R.id.num_black)
         val numWhite: TextView = findViewById(R.id.num_white)
 
-        rollButton.setOnClickListener {
+        findViewById<Button>(R.id.button).setOnClickListener {
             val text = getResult(numGreen, numPurple, numYellow, numRed, numBlue, numBlack, numWhite)
             resultsTextView.text = text
             resultsTextView.visibility = VISIBLE
         }
 
-        clearButton.setOnClickListener {
+        findViewById<Button>(R.id.clear).setOnClickListener {
             numGreen.text="0"
             numPurple.text="0"
             numYellow.text="0"
@@ -54,84 +38,84 @@ class MainActivity : AppCompatActivity() {
             numWhite.text="0"
         }
 
-        plusGreen.setOnClickListener {
+        findViewById<Button>(R.id.plus_green).setOnClickListener {
             val text = (numGreen.text.toString().toInt() + 1).toString()
             numGreen.text = text
         }
 
-        plusPurple.setOnClickListener {
+        findViewById<Button>(R.id.plus_purple).setOnClickListener {
             val text = (numPurple.text.toString().toInt() + 1).toString()
             numPurple.text = text
         }
 
-        plusYellow.setOnClickListener {
+        findViewById<Button>(R.id.plus_yellow).setOnClickListener {
             val text = (numYellow.text.toString().toInt() + 1).toString()
             numYellow.text = text
         }
 
-        plusRed.setOnClickListener {
+        findViewById<Button>(R.id.plus_red).setOnClickListener {
             val text = (numRed.text.toString().toInt() + 1).toString()
             numRed.text = text
         }
 
-        plusBlue.setOnClickListener {
+        findViewById<Button>(R.id.plus_blue).setOnClickListener {
             val text = (numBlue.text.toString().toInt() + 1).toString()
             numBlue.text = text
         }
 
-        plusBlack.setOnClickListener {
+        findViewById<Button>(R.id.plus_black).setOnClickListener {
             val text = (numBlack.text.toString().toInt() + 1).toString()
             numBlack.text = text
         }
 
-        plusWhite.setOnClickListener{
+        findViewById<Button>(R.id.plus_white).setOnClickListener{
             val text = (numWhite.text.toString().toInt() +1).toString()
             numWhite.text = text
         }
 
-        minusGreen.setOnClickListener {
+        findViewById<Button>(R.id.minus_green).setOnClickListener {
             if(numGreen.text.toString().toInt()>0) {
                 val text = (numGreen.text.toString().toInt() - 1).toString()
                 numGreen.text = text
             }
         }
 
-        minusPurple.setOnClickListener {
+        findViewById<Button>(R.id.minus_purple).setOnClickListener {
             if(numPurple.text.toString().toInt()>0) {
                 val text = (numPurple.text.toString().toInt() - 1).toString()
                 numPurple.text = text
             }
         }
 
-        minusYellow.setOnClickListener {
+        findViewById<Button>(R.id.minus_yellow).setOnClickListener {
             if(numYellow.text.toString().toInt()>0) {
                 val text = (numYellow.text.toString().toInt() - 1).toString()
                 numYellow.text = text
             }
         }
 
-        minusRed.setOnClickListener {
+        findViewById<Button>(R.id.minus_red).setOnClickListener {
             if(numRed.text.toString().toInt()>0) {
                 val text = (numRed.text.toString().toInt() - 1).toString()
                 numRed.text = text
             }
         }
 
-        minusBlue.setOnClickListener {
+        findViewById<Button>(R.id.minus_blue).setOnClickListener {
             if(numBlue.text.toString().toInt()>0) {
                 val text = (numBlue.text.toString().toInt() - 1).toString()
                 numBlue.text = text
             }
         }
 
-        minusBlack.setOnClickListener {
+        findViewById<Button>(R.id.minus_black).setOnClickListener {
             if(numBlack.text.toString().toInt()>0) {
                 val text = (numBlack.text.toString().toInt() - 1).toString()
                 numBlack.text = text
             }
         }
 
-        minusWhite.setOnClickListener {
+        findViewById<Button>(R.id.minus_white).setOnClickListener {
             if(numWhite.text.toString().toInt()>0) {
                 val text = (numWhite.text.toString().toInt() - 1).toString()
                 numWhite.text = text
