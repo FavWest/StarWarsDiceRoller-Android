@@ -1,324 +1,322 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@drawable/gradient">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <Button
-        android:id="@+id/plus_green"
-        android:text="@string/plus"
-        app:layout_constraintBottom_toBottomOf="@+id/num_green"
-        app:layout_constraintTop_toTopOf="@+id/num_green"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintDimensionRatio="H, 1:1"
-        style="@style/plus" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient"
+        tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/num_green"
-        app:layout_constraintStart_toEndOf="@id/plus_green"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="@string/zero"
-        style="@style/num"/>
+        <Button
+            android:id="@+id/plus_green"
+            style="@style/plus"
+            android:text="@string/plus"
+            app:layout_constraintBottom_toBottomOf="@+id/num_green"
+            app:layout_constraintDimensionRatio="H, 1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/num_green" />
 
-
-    <Button
-        android:id="@+id/minus_green"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="4dp"
-        android:background="@drawable/square_button"
-        android:text="@string/minus"
-        app:layout_constraintBottom_toBottomOf="@+id/num_green"
-        app:layout_constraintDimensionRatio="H, 1:1"
-        app:layout_constraintStart_toEndOf="@+id/num_green"
-        app:layout_constraintTop_toTopOf="@+id/num_green" />
-
-    <Button
-        android:id="@+id/plus_purple"
-        android:text="+"
-        app:layout_constraintBottom_toBottomOf="@+id/num_purple"
-        app:layout_constraintTop_toTopOf="@+id/num_purple"
-        app:layout_constraintStart_toEndOf="@id/minus_green"
-        app:layout_constraintDimensionRatio="H, 1:1"
-        style="@style/plus"/>
-
-    <TextView
-        android:id="@+id/num_purple"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginRight="4dp"
-        android:textSize="30sp"
-        app:layout_constraintStart_toEndOf="@id/plus_purple"
-        app:layout_constraintTop_toTopOf="parent"
-        android:textColor="@color/white"
-        android:text="0"
-        android:background="@color/dice_purple"
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp" />
+        <TextView
+            android:id="@+id/num_green"
+            style="@style/num"
+            android:text="@string/zero"
+            app:layout_constraintStart_toEndOf="@id/plus_green"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
-    <Button
-        android:id="@+id/minus_purple"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:background="@drawable/square_button"
-        android:text="-"
-        app:layout_constraintBottom_toBottomOf="@+id/num_purple"
-        app:layout_constraintDimensionRatio="H, 1:1"
-        app:layout_constraintStart_toEndOf="@+id/num_purple"
-        app:layout_constraintTop_toTopOf="@+id/num_purple" />
+        <Button
+            android:id="@+id/minus_green"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/square_button"
+            android:text="@string/minus"
+            app:layout_constraintBottom_toBottomOf="@+id/num_green"
+            app:layout_constraintDimensionRatio="H, 1:1"
+            app:layout_constraintStart_toEndOf="@+id/num_green"
+            app:layout_constraintTop_toTopOf="@+id/num_green" />
 
-    <Button
-        android:background="@drawable/square_button"
-        android:id="@+id/plus_yellow"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="+"
-        app:layout_constraintBottom_toBottomOf="@+id/num_yellow"
-        app:layout_constraintTop_toTopOf="@+id/num_yellow"
-        android:layout_marginStart="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintDimensionRatio="H, 1:1"
-        />
+        <Button
+            android:id="@+id/plus_purple"
+            style="@style/plus"
+            android:text="+"
+            app:layout_constraintBottom_toBottomOf="@+id/num_purple"
+            app:layout_constraintDimensionRatio="H, 1:1"
+            app:layout_constraintStart_toEndOf="@id/minus_green"
+            app:layout_constraintTop_toTopOf="@+id/num_purple" />
 
-    <TextView
-        android:id="@+id/num_yellow"
-        app:layout_constraintStart_toEndOf="@id/plus_yellow"
-        app:layout_constraintTop_toBottomOf="@id/num_green"
-        android:text="0"
-        android:background="@color/dice_yellow"
-        style="@style/num"
- />
-
-
-    <Button
-        android:id="@+id/minus_yellow"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:background="@drawable/square_button"
-        android:text="-"
-        app:layout_constraintBottom_toBottomOf="@+id/num_yellow"
-        app:layout_constraintDimensionRatio="H, 1:1"
-        app:layout_constraintStart_toEndOf="@+id/num_yellow"
-        app:layout_constraintTop_toTopOf="@+id/num_yellow" />
-
-    <Button
-        android:id="@+id/plus_red"
-        android:layout_width="0dp"
-        android:background="@drawable/square_button"
-        android:layout_height="0dp"
-        android:text="+"
-        app:layout_constraintBottom_toBottomOf="@+id/num_red"
-        app:layout_constraintTop_toTopOf="@+id/num_red"
-        android:layout_marginStart="16dp"
-        
-        app:layout_constraintStart_toEndOf="@id/minus_green"
-        app:layout_constraintDimensionRatio="H, 1:1" />
-
-    <TextView
-        android:id="@+id/num_red"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginRight="4dp"
-        android:textSize="30sp"
-        app:layout_constraintStart_toEndOf="@id/plus_red"
-        app:layout_constraintTop_toBottomOf="@id/num_purple"
-        android:textColor="@color/white"
-        android:text="0"
-        android:background="@color/dice_red"
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp" />
-
-    <Button
-        android:id="@+id/minus_red"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:background="@drawable/square_button"
-        android:text="-"
-        app:layout_constraintBottom_toBottomOf="@+id/num_red"
-        app:layout_constraintDimensionRatio="H, 1:1"
-        app:layout_constraintStart_toEndOf="@+id/num_red"
-        app:layout_constraintTop_toTopOf="@+id/num_red" />
-
-    <Button
-        android:background="@drawable/square_button"
-        android:id="@+id/plus_blue"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="+"
-        app:layout_constraintBottom_toBottomOf="@+id/num_blue"
-        app:layout_constraintTop_toTopOf="@+id/num_blue"
-        android:layout_marginStart="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintDimensionRatio="H, 1:1"
-        />
-
-    <TextView
-        android:id="@+id/num_blue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginRight="4dp"
-        android:textSize="30sp"
-        app:layout_constraintStart_toEndOf="@id/plus_blue"
-        app:layout_constraintTop_toBottomOf="@id/num_yellow"
-        android:textColor="@color/black"
-        android:text="0"
-        android:background="@color/dice_blue"
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp" />
+        <TextView
+            android:id="@+id/num_purple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:background="@color/dice_purple"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintStart_toEndOf="@id/plus_purple"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
-    <Button
-        android:id="@+id/minus_blue"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:background="@drawable/square_button"
-        android:text="-"
-        app:layout_constraintBottom_toBottomOf="@+id/num_blue"
-        app:layout_constraintDimensionRatio="H, 1:1"
-        app:layout_constraintStart_toEndOf="@+id/num_blue"
-        app:layout_constraintTop_toTopOf="@+id/num_blue" />
+        <Button
+            android:id="@+id/minus_purple"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:background="@drawable/square_button"
+            android:text="-"
+            app:layout_constraintBottom_toBottomOf="@+id/num_purple"
+            app:layout_constraintDimensionRatio="H, 1:1"
+            app:layout_constraintStart_toEndOf="@+id/num_purple"
+            app:layout_constraintTop_toTopOf="@+id/num_purple" />
 
-    <Button
-        android:id="@+id/plus_black"
-        android:layout_width="0dp"
-        android:background="@drawable/square_button"
-        android:layout_height="0dp"
-        android:text="+"
-        app:layout_constraintBottom_toBottomOf="@+id/num_black"
-        app:layout_constraintTop_toTopOf="@+id/num_black"
-        android:layout_marginStart="16dp"
-        app:layout_constraintStart_toEndOf="@id/minus_green"
-        app:layout_constraintDimensionRatio="H, 1:1" />
+        <Button
+            android:id="@+id/plus_yellow"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/square_button"
+            android:text="+"
+            app:layout_constraintBottom_toBottomOf="@+id/num_yellow"
+            app:layout_constraintDimensionRatio="H, 1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/num_yellow" />
 
-    <TextView
-        android:id="@+id/num_black"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="16dp"
-        android:background="@color/black"
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp"
-        android:text="0"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        app:layout_constraintStart_toEndOf="@id/plus_black"
-        app:layout_constraintTop_toBottomOf="@id/num_red" />
+        <TextView
+            android:id="@+id/num_yellow"
+            style="@style/num"
+            android:background="@color/dice_yellow"
+            android:text="0"
+            app:layout_constraintStart_toEndOf="@id/plus_yellow"
+            app:layout_constraintTop_toBottomOf="@id/num_green" />
 
-    <Button
-        android:id="@+id/minus_black"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:background="@drawable/square_button"
-        android:text="-"
-        app:layout_constraintBottom_toBottomOf="@+id/num_black"
-        app:layout_constraintDimensionRatio="H, 1:1"
-        app:layout_constraintStart_toEndOf="@+id/num_black"
-        app:layout_constraintTop_toTopOf="@+id/num_black" />
 
-    <Button
-        android:background="@drawable/square_button"
-        android:id="@+id/plus_white"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="+"
-        app:layout_constraintBottom_toBottomOf="@+id/num_white"
-        app:layout_constraintTop_toTopOf="@+id/num_white"
-        android:layout_marginStart="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintDimensionRatio="H, 1:1"
-        />
+        <Button
+            android:id="@+id/minus_yellow"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:background="@drawable/square_button"
+            android:text="-"
+            app:layout_constraintBottom_toBottomOf="@+id/num_yellow"
+            app:layout_constraintDimensionRatio="H, 1:1"
+            app:layout_constraintStart_toEndOf="@+id/num_yellow"
+            app:layout_constraintTop_toTopOf="@+id/num_yellow" />
 
-    <TextView
-        android:id="@+id/num_white"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="16dp"
-        android:background="@color/white"
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp"
-        android:text="0"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        app:layout_constraintStart_toEndOf="@id/plus_white"
-        app:layout_constraintTop_toBottomOf="@id/num_blue" />
+        <Button
+            android:id="@+id/plus_red"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/square_button"
+            android:text="+"
+            app:layout_constraintBottom_toBottomOf="@+id/num_red"
+            app:layout_constraintDimensionRatio="H, 1:1"
 
-    <Button
-        android:id="@+id/minus_white"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:background="@drawable/square_button"
-        android:text="-"
-        app:layout_constraintBottom_toBottomOf="@+id/num_white"
-        app:layout_constraintDimensionRatio="H, 1:1"
-        app:layout_constraintStart_toEndOf="@+id/num_white"
-        app:layout_constraintTop_toTopOf="@+id/num_white" />
+            app:layout_constraintStart_toEndOf="@id/minus_green"
+            app:layout_constraintTop_toTopOf="@+id/num_red" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:padding="12dp"
-        android:text="@string/roll"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/num_white"
-        app:layout_constraintStart_toStartOf="@+id/num_white"
-        app:layout_constraintTop_toBottomOf="@+id/num_white" />
+        <TextView
+            android:id="@+id/num_red"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:background="@color/dice_red"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintStart_toEndOf="@id/plus_red"
+            app:layout_constraintTop_toBottomOf="@id/num_purple" />
 
-    <Button
-        android:id="@+id/clear"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/clear"
-        android:padding="12dp"
-        app:layout_constraintBaseline_toBaselineOf="@id/button"
-        app:layout_constraintStart_toStartOf="@id/num_black"
-        app:layout_constraintEnd_toEndOf="@id/num_black"
-        />
+        <Button
+            android:id="@+id/minus_red"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:background="@drawable/square_button"
+            android:text="-"
+            app:layout_constraintBottom_toBottomOf="@+id/num_red"
+            app:layout_constraintDimensionRatio="H, 1:1"
+            app:layout_constraintStart_toEndOf="@+id/num_red"
+            app:layout_constraintTop_toTopOf="@+id/num_red" />
 
-    <TextView
-        android:id="@+id/results"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:background="@color/white"
-        android:padding="4dp"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button"
-        tools:text="2 success\n1 advantage\n1 triumph\n3 light\n2 dark"/>
+        <Button
+            android:id="@+id/plus_blue"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/square_button"
+            android:text="+"
+            app:layout_constraintBottom_toBottomOf="@+id/num_blue"
+            app:layout_constraintDimensionRatio="H, 1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/num_blue" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/num_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:background="@color/dice_blue"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            app:layout_constraintStart_toEndOf="@id/plus_blue"
+            app:layout_constraintTop_toBottomOf="@id/num_yellow" />
+
+
+        <Button
+            android:id="@+id/minus_blue"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:background="@drawable/square_button"
+            android:text="-"
+            app:layout_constraintBottom_toBottomOf="@+id/num_blue"
+            app:layout_constraintDimensionRatio="H, 1:1"
+            app:layout_constraintStart_toEndOf="@+id/num_blue"
+            app:layout_constraintTop_toTopOf="@+id/num_blue" />
+
+        <Button
+            android:id="@+id/plus_black"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/square_button"
+            android:text="+"
+            app:layout_constraintBottom_toBottomOf="@+id/num_black"
+            app:layout_constraintDimensionRatio="H, 1:1"
+            app:layout_constraintStart_toEndOf="@id/minus_green"
+            app:layout_constraintTop_toTopOf="@+id/num_black" />
+
+        <TextView
+            android:id="@+id/num_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/black"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintStart_toEndOf="@id/plus_black"
+            app:layout_constraintTop_toBottomOf="@id/num_red" />
+
+        <Button
+            android:id="@+id/minus_black"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:background="@drawable/square_button"
+            android:text="-"
+            app:layout_constraintBottom_toBottomOf="@+id/num_black"
+            app:layout_constraintDimensionRatio="H, 1:1"
+            app:layout_constraintStart_toEndOf="@+id/num_black"
+            app:layout_constraintTop_toTopOf="@+id/num_black" />
+
+        <Button
+            android:id="@+id/plus_white"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/square_button"
+            android:text="+"
+            app:layout_constraintBottom_toBottomOf="@+id/num_white"
+            app:layout_constraintDimensionRatio="H, 1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/num_white" />
+
+        <TextView
+            android:id="@+id/num_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/white"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            app:layout_constraintStart_toEndOf="@id/plus_white"
+            app:layout_constraintTop_toBottomOf="@id/num_blue" />
+
+        <Button
+            android:id="@+id/minus_white"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:background="@drawable/square_button"
+            android:text="-"
+            app:layout_constraintBottom_toBottomOf="@+id/num_white"
+            app:layout_constraintDimensionRatio="H, 1:1"
+            app:layout_constraintStart_toEndOf="@+id/num_white"
+            app:layout_constraintTop_toTopOf="@+id/num_white" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:padding="12dp"
+            android:text="@string/roll"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/num_white"
+            app:layout_constraintStart_toStartOf="@+id/num_white"
+            app:layout_constraintTop_toBottomOf="@+id/num_white" />
+
+        <Button
+            android:id="@+id/clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:text="@string/clear"
+            app:layout_constraintBaseline_toBaselineOf="@id/button"
+            app:layout_constraintEnd_toEndOf="@id/num_black"
+            app:layout_constraintStart_toStartOf="@id/num_black" />
+
+        <TextView
+            android:id="@+id/results"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/white"
+            android:padding="4dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button"
+            tools:text="2 success\n1 advantage\n1 triumph\n3 light\n2 dark" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

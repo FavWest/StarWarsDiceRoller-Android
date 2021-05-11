@@ -7,118 +7,115 @@ import android.view.View.VISIBLE
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.databinding.DataBindingUtil
+import com.favwest.starwarsdiceroller.databinding.ActivityMainBinding
 import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        val resultsTextView: TextView = findViewById(R.id.results)
-        val numGreen: TextView = findViewById(R.id.num_green)
-        val numPurple: TextView = findViewById(R.id.num_purple)
-        val numYellow: TextView = findViewById(R.id.num_yellow)
-        val numRed: TextView = findViewById(R.id.num_red)
-        val numBlue: TextView = findViewById(R.id.num_blue)
-        val numBlack: TextView = findViewById(R.id.num_black)
-        val numWhite: TextView = findViewById(R.id.num_white)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
-        findViewById<Button>(R.id.button).setOnClickListener {
-            val text = getResult(numGreen, numPurple, numYellow, numRed, numBlue, numBlack, numWhite)
-            resultsTextView.text = text
-            resultsTextView.visibility = VISIBLE
-        }
+        binding.apply {
+            button.setOnClickListener {
+                val text = getResult(numGreen, numPurple, numYellow, numRed, numBlue, numBlack, numWhite)
+                results.text = text
+                results.visibility = VISIBLE
+            }
 
-        findViewById<Button>(R.id.clear).setOnClickListener {
-            numGreen.text="0"
-            numPurple.text="0"
-            numYellow.text="0"
-            numRed.text="0"
-            numBlue.text="0"
-            numBlack.text="0"
-            numWhite.text="0"
-        }
+            clear.setOnClickListener {
+                numGreen.text = "0"
+                numPurple.text = "0"
+                numYellow.text = "0"
+                numRed.text = "0"
+                numBlue.text = "0"
+                numBlack.text = "0"
+                numWhite.text = "0"
+            }
 
-        findViewById<Button>(R.id.plus_green).setOnClickListener {
-            val text = (numGreen.text.toString().toInt() + 1).toString()
-            numGreen.text = text
-        }
 
-        findViewById<Button>(R.id.plus_purple).setOnClickListener {
-            val text = (numPurple.text.toString().toInt() + 1).toString()
-            numPurple.text = text
-        }
-
-        findViewById<Button>(R.id.plus_yellow).setOnClickListener {
-            val text = (numYellow.text.toString().toInt() + 1).toString()
-            numYellow.text = text
-        }
-
-        findViewById<Button>(R.id.plus_red).setOnClickListener {
-            val text = (numRed.text.toString().toInt() + 1).toString()
-            numRed.text = text
-        }
-
-        findViewById<Button>(R.id.plus_blue).setOnClickListener {
-            val text = (numBlue.text.toString().toInt() + 1).toString()
-            numBlue.text = text
-        }
-
-        findViewById<Button>(R.id.plus_black).setOnClickListener {
-            val text = (numBlack.text.toString().toInt() + 1).toString()
-            numBlack.text = text
-        }
-
-        findViewById<Button>(R.id.plus_white).setOnClickListener{
-            val text = (numWhite.text.toString().toInt() +1).toString()
-            numWhite.text = text
-        }
-
-        findViewById<Button>(R.id.minus_green).setOnClickListener {
-            if(numGreen.text.toString().toInt()>0) {
-                val text = (numGreen.text.toString().toInt() - 1).toString()
+            plusGreen.setOnClickListener {
+                val text = (numGreen.text.toString().toInt() + 1).toString()
                 numGreen.text = text
             }
-        }
 
-        findViewById<Button>(R.id.minus_purple).setOnClickListener {
-            if(numPurple.text.toString().toInt()>0) {
-                val text = (numPurple.text.toString().toInt() - 1).toString()
+            plusPurple.setOnClickListener {
+                val text = (numPurple.text.toString().toInt() + 1).toString()
                 numPurple.text = text
             }
-        }
 
-        findViewById<Button>(R.id.minus_yellow).setOnClickListener {
-            if(numYellow.text.toString().toInt()>0) {
-                val text = (numYellow.text.toString().toInt() - 1).toString()
+            plusYellow.setOnClickListener {
+                val text = (numYellow.text.toString().toInt() + 1).toString()
                 numYellow.text = text
             }
-        }
 
-        findViewById<Button>(R.id.minus_red).setOnClickListener {
-            if(numRed.text.toString().toInt()>0) {
-                val text = (numRed.text.toString().toInt() - 1).toString()
+            plusRed.setOnClickListener {
+                val text = (numRed.text.toString().toInt() + 1).toString()
                 numRed.text = text
             }
-        }
 
-        findViewById<Button>(R.id.minus_blue).setOnClickListener {
-            if(numBlue.text.toString().toInt()>0) {
-                val text = (numBlue.text.toString().toInt() - 1).toString()
+            plusBlue.setOnClickListener {
+                val text = (numBlue.text.toString().toInt() + 1).toString()
                 numBlue.text = text
             }
-        }
 
-        findViewById<Button>(R.id.minus_black).setOnClickListener {
-            if(numBlack.text.toString().toInt()>0) {
-                val text = (numBlack.text.toString().toInt() - 1).toString()
+            plusBlack.setOnClickListener {
+                val text = (numBlack.text.toString().toInt() + 1).toString()
                 numBlack.text = text
             }
-        }
 
-        findViewById<Button>(R.id.minus_white).setOnClickListener {
-            if(numWhite.text.toString().toInt()>0) {
-                val text = (numWhite.text.toString().toInt() - 1).toString()
+            plusWhite.setOnClickListener {
+                val text = (numWhite.text.toString().toInt() + 1).toString()
                 numWhite.text = text
+            }
+
+            minusGreen.setOnClickListener {
+                if (numGreen.text.toString().toInt() > 0) {
+                    val text = (numGreen.text.toString().toInt() - 1).toString()
+                    numGreen.text = text
+                }
+            }
+
+            minusPurple.setOnClickListener {
+                if (numPurple.text.toString().toInt() > 0) {
+                    val text = (numPurple.text.toString().toInt() - 1).toString()
+                    numPurple.text = text
+                }
+            }
+            minusYellow.setOnClickListener {
+                if (numYellow.text.toString().toInt() > 0) {
+                    val text = (numYellow.text.toString().toInt() - 1).toString()
+                    numYellow.text = text
+                }
+            }
+
+            minusRed.setOnClickListener {
+                if (numRed.text.toString().toInt() > 0) {
+                    val text = (numRed.text.toString().toInt() - 1).toString()
+                    numRed.text = text
+                }
+            }
+
+            minusBlue.setOnClickListener {
+                if (numBlue.text.toString().toInt() > 0) {
+                    val text = (numBlue.text.toString().toInt() - 1).toString()
+                    numBlue.text = text
+                }
+            }
+
+            minusBlack.setOnClickListener {
+                if (numBlack.text.toString().toInt() > 0) {
+                    val text = (numBlack.text.toString().toInt() - 1).toString()
+                    numBlack.text = text
+                }
+            }
+
+            minusWhite.setOnClickListener {
+                if (numWhite.text.toString().toInt() > 0) {
+                    val text = (numWhite.text.toString().toInt() - 1).toString()
+                    numWhite.text = text
+                }
             }
         }
     }
